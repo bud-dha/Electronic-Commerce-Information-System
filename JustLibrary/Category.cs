@@ -3,5 +3,5 @@ using System.Collections.Generic;
 
 public class Category
 {
-	public List<string> Categories;
+	public List<string> categories;
 }

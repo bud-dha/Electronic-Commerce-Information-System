@@ -3,5 +3,5 @@ using System.Collections.Generic;
 
 public class Brand
 {
-    public List<string> Brands;
+    public List<string> brands;
 }

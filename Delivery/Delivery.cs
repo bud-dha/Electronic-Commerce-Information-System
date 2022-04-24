@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Catalog
+namespace Delivery
 {
-    public class Catalog
+    public class Delivery
     {
-        public List<Product> products;
+        private Courier courier;
+        //private Order order;
     }
 }
