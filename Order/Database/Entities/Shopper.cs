@@ -1,18 +1,29 @@
 ﻿using System;
 
-public class Courier
+public class Shopper
 {
+    /// <summary>
+    /// 
+    /// </summary>
     private readonly long Id;
     /// <summary>
-    /// Имя курьера.
+    /// 
     /// </summary>
 	private string _name;
     /// <summary>
-    /// Фамилия курьера.
+    /// 
     /// </summary>
     private string _surname;
     /// <summary>
-    /// Номер телефона курьера.
+    /// 
+    /// </summary>
+    private string _address;
+    /// <summary>
+    /// 
     /// </summary>
     private string _phoneNumber;
+    /// <summary>
+    /// 
+    /// </summary>
+    private string _mail;
 }

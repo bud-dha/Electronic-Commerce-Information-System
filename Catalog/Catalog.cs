@@ -7,6 +7,9 @@ namespace Catalog
 {
     public class Catalog
     {
+        /// <summary>
+        /// Список продуктов.
+        /// </summary>
         public List<Product> products;
     }
 }
