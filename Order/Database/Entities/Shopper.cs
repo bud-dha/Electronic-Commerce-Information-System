@@ -1,29 +1,32 @@
 ﻿using System;
 
+/// <summary>
+/// Класс покупателя.
+/// </summary>
 public class Shopper
 {
     /// <summary>
-    /// 
+    /// покупателя.
     /// </summary>
-    private readonly long Id;
+    public int Id { get; set; }
     /// <summary>
-    /// 
+    /// Имя покупателя.
     /// </summary>
-	private string _name;
+	public string Name { get; set; }
     /// <summary>
-    /// 
+    /// Фамилия покупателя.
     /// </summary>
-    private string _surname;
+    public string Surname { get; set; }
     /// <summary>
-    /// 
+    /// Адресс покупателя.
     /// </summary>
-    private string _address;
+    public string Address { get; set; }
     /// <summary>
-    /// 
+    /// Номер телефона покупателя.
     /// </summary>
-    private string _phoneNumber;
+    public string PhoneNumber { get; set; }
     /// <summary>
-    /// 
+    /// Почта покупателя.
     /// </summary>
-    private string _mail;
+    public string Mail { get; set; }
 }

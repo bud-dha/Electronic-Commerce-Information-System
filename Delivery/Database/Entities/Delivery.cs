@@ -5,19 +5,22 @@ using System.Threading.Tasks;
 
 namespace Delivery.Database.Entities
 {
+    /// <summary>
+    /// Класс доставки.
+    /// </summary>
     public class Delivery
     {
         /// <summary>
-        /// 
+        /// ID доставки.
         /// </summary>
-        private readonly long Id;
+        public int Id { get; set; } 
         /// <summary>
-        /// 
+        /// ID заказа на доставку.
         /// </summary>
-        private long _orderId;
+        public int OrderId { get; set; }
         /// <summary>
-        /// 
+        /// ID курьера на доставку.
         /// </summary>
-        private long _courierId;
+        public int CourierId { get; set; }
     }
 }

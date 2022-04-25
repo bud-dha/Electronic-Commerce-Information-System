@@ -1,18 +1,24 @@
 ﻿using System;
 
+/// <summary>
+/// Класс курьера.
+/// </summary>
 public class Courier
 {
-    private readonly long Id;
+    /// <summary>
+    /// ID курьера.
+    /// </summary>
+    public int Id { get; set; }
     /// <summary>
     /// Имя курьера.
     /// </summary>
-	private string _name;
+	public string Name { get; set; }
     /// <summary>
     /// Фамилия курьера.
     /// </summary>
-    private string _surname;
+    public string Surname { get; set; }
     /// <summary>
     /// Номер телефона курьера.
     /// </summary>
-    private string _phoneNumber;
+    public string PhoneNumber { get; set; }
 }

@@ -5,19 +5,22 @@ using System.Threading.Tasks;
 
 namespace Order.Database.Entities
 {
+    /// <summary>
+    /// Класс заказа.
+    /// </summary>
     public class Order
     {
         /// <summary>
-        /// 
+        /// ID заказа.
         /// </summary>
-        private readonly long Id;
+        public int Id { get; set; }
         /// <summary>
-        /// 
+        /// Список ID продуктов.
         /// </summary>
-        private List<long> _productId;
+        public List<int> ProductsId;
         /// <summary>
-        /// 
+        /// ID покупателя
         /// </summary>
-        private long _shopperId;
+        public int ShopperId { get; set; }
     }
 }
