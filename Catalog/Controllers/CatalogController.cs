@@ -4,19 +4,22 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Catalog.Service;
 
 namespace Catalog.Controllers
 {
     public class CatalogController : Controller
     {
+       CatalogServices catalogServices = new CatalogServices();
+
         // GET: CatalogController
-        public ActionResult Index()
+        public Catalog Index()
         {
-            return View();
+            return catalogServices.GetProducts();
         }
 
-        // GET: CatalogController/Details/5
-        public ActionResult Details(int id)
+        // GET: CatalogController/Products/5
+        public ActionResult Products(int id)
         {
             return View();
         }
