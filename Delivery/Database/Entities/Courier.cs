@@ -8,7 +8,7 @@ public class Courier
     /// <summary>
     /// ID курьера.
     /// </summary>
-    public int Id { get; set; }
+    public int Id { get; }
     /// <summary>
     /// Имя курьера.
     /// </summary>

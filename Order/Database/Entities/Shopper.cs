@@ -8,7 +8,7 @@ public class Shopper
     /// <summary>
     /// покупателя.
     /// </summary>
-    public int Id { get; set; }
+    public int Id { get;}
     /// <summary>
     /// Имя покупателя.
     /// </summary>

@@ -8,7 +8,7 @@ public class Seller
     /// <summary>
     /// ID продавца.
     /// </summary>
-    public int Id { get; set; }
+    public int Id { get; }
     /// <summary>
     /// Имя продавца.
     /// </summary>

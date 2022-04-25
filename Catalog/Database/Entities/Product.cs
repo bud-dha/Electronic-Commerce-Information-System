@@ -9,7 +9,7 @@ public class Product
 	/// <summary>
 	/// Id продукта.
 	/// </summary>
-	public int Id { get; set; }
+	public int Id { get; }
 	/// <summary>
 	/// Название продукта.
 	/// </summary>
@@ -21,10 +21,10 @@ public class Product
 	/// <summary>
 	/// Брэнд продукта.
 	/// </summary>
-	public Brand Brand { get; set; }
+	public string Brand { get; set; }
 	/// <summary>
 	/// Категория продукта.
 	/// </summary>
-	public Category Category { get; set; }
+	public string Category { get; set; }
 }
 

@@ -13,7 +13,7 @@ namespace Delivery.Database.Entities
         /// <summary>
         /// ID доставки.
         /// </summary>
-        public int Id { get; set; } 
+        public int Id { get; } 
         /// <summary>
         /// ID заказа на доставку.
         /// </summary>

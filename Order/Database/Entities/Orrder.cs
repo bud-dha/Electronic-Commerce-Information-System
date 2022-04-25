@@ -8,12 +8,16 @@ namespace Order.Database.Entities
     /// <summary>
     /// Класс заказа.
     /// </summary>
-    public class Order
+    public class Orrder
     {
+        /// <summary>
+        /// Счетчик для присвоения Id.
+        /// </summary>
+        private int count = 0;
         /// <summary>
         /// ID заказа.
         /// </summary>
-        public int Id { get; set; }
+        public int Id { get;}
         /// <summary>
         /// Список ID продуктов.
         /// </summary>
@@ -22,5 +26,15 @@ namespace Order.Database.Entities
         /// ID покупателя
         /// </summary>
         public int ShopperId { get; set; }
+
+        /// <summary>
+        /// Создает экземпляр класса<see cref="Orrder">.
+        /// </summary>
+        public Orrder(List<int> products_id, int shopper_id)
+        {
+            Id = count++;
+            ProductsId = products_id;
+            ShopperId = shopper_id;
+        }
     }
 }
