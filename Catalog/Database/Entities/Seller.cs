@@ -1,17 +1,20 @@
 ﻿using System;
 
+/// <summary>
+/// Класс продовца.
+/// </summary>
 public class Seller
 {
     /// <summary>
     /// ID продавца.
     /// </summary>
-    private readonly long Id;
+    public int Id { get; set; }
     /// <summary>
     /// Имя продавца.
     /// </summary>
-	private string _name;
+	public string Name { get; set; }
     /// <summary>
     /// Фамилия продавца.
     /// </summary>
-    private string _surname;	
+    public string Surname { get; set; }
 }

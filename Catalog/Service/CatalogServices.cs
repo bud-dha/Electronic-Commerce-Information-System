@@ -11,8 +11,7 @@ namespace Catalog.Service
 
         /// <summary>
         /// Добаавляет товар.
-        /// </summary>
-        /// <param name="product"></param>
+        /// </summary>       
         public void AddProduct(Product product)
         {
             catalog.products.Add(product);
@@ -20,7 +19,6 @@ namespace Catalog.Service
         /// <summary>
         /// Удаляет товар.
         /// </summary>
-        /// <param name="product"></param>
         public void RemoveProduct(Product product)
         {
             catalog.products.Remove(product);
@@ -28,8 +26,6 @@ namespace Catalog.Service
         /// <summary>
         /// Возвращает продукт с заданным ID.
         /// </summary>
-        /// <param name="ID"></param>
-        /// <returns></returns>
         public Product FindProduct(long id)
         {
             Product product = catalog.products.Find(x => x.Id == id);
@@ -38,37 +34,38 @@ namespace Catalog.Service
         /// <summary>
         /// Возвращает продукт с заданным названием.
         /// </summary>
-        /// <param name="name"></param>
-        /// <returns></returns>
         public Product FindProduct(string name)
         {
             Product product = catalog.products.Find(x => x.Name == name);
             return product;
         }
         /// <summary>
-        /// Возвращает продукт с заданным брендом.
+        /// Возвращает список продуктов с заданным брендом.
         /// </summary>
-        /// <param name="brand"></param>
-        /// <returns></returns>
-        public Product FindProduct(Brand brand)
+        public List<Product> FindProduct(Brand brand)
         {
-            Product product = catalog.products.Find(x => x.Brand == brand);
-            return product;
+            List<Product> brand_products = null;
+            for (int i = 0; i < catalog.products.Count; i++)
+            {
+                brand_products.Add(catalog.products.Find(x => x.Brand == brand));
+            }
+            return brand_products;
         }
         /// <summary>
-        /// Возвращает продукт с заданной категорией.
+        /// Возвращает список продуктов с заданной категорией.
         /// </summary>
-        /// <param name="name"></param>
-        /// <returns></returns>
-        public Product FindProduct(Category category)
+        public List<Product> FindProduct(Category category)
         {
-            Product product = catalog.products.Find(x => x.Category == category);
-            return product;
+            List <Product> category_products = null;
+            for (int i = 0; i < catalog.products.Count; i++)
+            {
+               category_products.Add(catalog.products.Find(x => x.Category == category));
+            }
+            return category_products;
         }
         /// <summary>
         /// Возвращает каталог продуктов.
         /// </summary>
-        /// <returns></returns>
         public Catalog GetProducts()
         {
             return catalog;

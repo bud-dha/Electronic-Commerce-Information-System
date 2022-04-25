@@ -2,36 +2,29 @@
 using System.Collections.Generic;
 
 /// <summary>
-/// 
+/// Класс продукта.
 /// </summary>
 public class Product
 {
 	/// <summary>
 	/// Id продукта.
 	/// </summary>
-	private long _id; 
+	public int Id { get; set; }
 	/// <summary>
 	/// Название продукта.
 	/// </summary>
-	private string _name;
+	public string Name { get; set; }
 	/// <summary>
 	/// Ценв продукта.
 	/// </summary>
-	private double _price;
+	public double Price { get; set; }
 	/// <summary>
 	/// Брэнд продукта.
 	/// </summary>
-	private Brand _brand;
+	public Brand Brand { get; set; }
 	/// <summary>
 	/// Категория продукта.
 	/// </summary>
-	private Category _category;
-
-
-	public long Id { get; set; }
-	public string Name { get; set; }
-	public Brand Brand { get; set; }
 	public Category Category { get; set; }
-
 }
 
