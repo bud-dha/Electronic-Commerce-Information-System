@@ -7,6 +7,10 @@ using System.Collections.Generic;
 public class Product
 {
 	/// <summary>
+	/// Счетчик для Id.
+	/// </summary>
+	private int count = 0;
+	/// <summary>
 	/// Id продукта.
 	/// </summary>
 	public int Id { get; }
@@ -26,5 +30,17 @@ public class Product
 	/// Категория продукта.
 	/// </summary>
 	public string Category { get; set; }
+
+	/// <summary>
+	/// Создает экземпляр класса<see cref="Product">.
+	/// </summary>
+	public Product(string name, double price, string brand, string category)
+	{
+		Id = count++;
+		Name = name;
+		Price = price;
+		Brand = brand;
+		Category = category;
+	}
 }
 

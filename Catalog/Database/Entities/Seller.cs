@@ -6,6 +6,10 @@
 public class Seller
 {
     /// <summary>
+    /// Счетчик для Id.
+    /// </summary>
+    private int count = 0;
+    /// <summary>
     /// ID продавца.
     /// </summary>
     public int Id { get; }
@@ -17,4 +21,14 @@ public class Seller
     /// Фамилия продавца.
     /// </summary>
     public string Surname { get; set; }
+
+    /// <summary>
+	/// Создает экземпляр класса<see cref="Seller">.
+	/// </summary>
+	public Seller(string name, string surname)
+    {
+        Id = count++;
+        Name = name;
+        Surname = surname;
+    }
 }

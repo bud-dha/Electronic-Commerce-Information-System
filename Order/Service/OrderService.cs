@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Order.Database.Entities;
-using Catalog.Service;
+using Catalog;
 
 namespace Order.Service
 {
     public class OrderService
     {
-        CatalogServices catalogserv = new CatalogServices();
+        Structures structures = new Structures();
 
         /// <summary>
         /// Создает заказ.
@@ -32,7 +32,7 @@ namespace Order.Service
         /// </summary>
         public Product FindProduct(long id)
         {
-            Product product = catalogserv.catalog.Find(x => x.Id == id);
+            Product product = structures.Catalog.Find(x => x.Id == id);
             return product;
         }
         /// <summary>
@@ -40,7 +40,7 @@ namespace Order.Service
         /// </summary>
         public Product FindProduct(string name)
         {
-            Product product = catalogserv.catalog.Find(x => x.Name == name);
+            Product product = structures.Catalog.Find(x => x.Name == name);
             return product;
         }
         /// <summary>
@@ -50,9 +50,9 @@ namespace Order.Service
         {
             List<Product> brand_products = null;
 
-            for (int i = 0; i < catalogserv.catalog.Count; i++)
+            for (int i = 0; i < structures.Catalog.Count; i++)
             {
-                brand_products.Add(catalogserv.catalog.Find(x => x.Brand == brand));
+                brand_products.Add(structures.Catalog.Find(x => x.Brand == brand));
             }
             return brand_products;
         }
@@ -63,9 +63,9 @@ namespace Order.Service
         {
             List<Product> category_products = null;
 
-            for (int i = 0; i < catalogserv.catalog.Count; i++)
+            for (int i = 0; i < structures.Catalog.Count; i++)
             {
-                category_products.Add(catalogserv.catalog.Find(x => x.Category == category));
+                category_products.Add(structures.Catalog.Find(x => x.Category == category));
             }
             return category_products;
         }
