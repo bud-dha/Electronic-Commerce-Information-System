@@ -11,6 +11,10 @@ namespace Delivery.Database.Entities
     public class Delivery
     {
         /// <summary>
+        /// 
+        /// </summary>
+        private int count = 0;
+        /// <summary>
         /// ID доставки.
         /// </summary>
         public int Id { get; } 
@@ -22,5 +26,15 @@ namespace Delivery.Database.Entities
         /// ID курьера на доставку.
         /// </summary>
         public int CourierId { get; set; }
+
+        /// <summary>
+        /// Создает экземпляр класса<see cref="Delivery">.
+        /// </summary>
+        public Delivery(int order_id, int courier_id)
+        {
+            Id = count++;
+            OrderId = order_id;
+            CourierId = courier_id;
+        }
     }
 }

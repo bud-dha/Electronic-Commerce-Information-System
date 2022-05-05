@@ -9,8 +9,13 @@ public class Product
 	/// <summary>
 	/// Счетчик для Id.
 	/// </summary>
-	private int count = 0;
+	private static int count = 0;
+
 	/// <summary>
+	/// Возвращает колличество Id.
+	/// </summary>
+	public static int Count => count;
+	/// <summary> 
 	/// Id продукта.
 	/// </summary>
 	public int Id { get; }

@@ -8,19 +8,19 @@ namespace Catalog
     /// <summary>
     /// Клас для хранения списокв.
     /// </summary>
-    public class Structures
+    public static class Structures
     {
         /// <summary>
         /// Список продуктов.
         /// </summary>
-        public List<Product> Catalog;
+        public static List<Product> Catalog;
         /// <summary>
         /// Список категорий.
         /// </summary>
-        public List<string> Categories;
+        public static List<string> Categories;
         /// <summary>
         /// Список брендов.
         /// </summary>
-        public List<string> Brands;
+        public static List<string> Brands;
     }
 }

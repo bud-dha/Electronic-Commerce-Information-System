@@ -6,6 +6,10 @@
 public class Courier
 {
     /// <summary>
+    /// Cчетчик для Id.
+    /// </summary>
+    private int count = 0;
+    /// <summary>
     /// ID курьера.
     /// </summary>
     public int Id { get; }
@@ -21,4 +25,15 @@ public class Courier
     /// Номер телефона курьера.
     /// </summary>
     public string PhoneNumber { get; set; }
+
+    /// <summary>
+    /// Создает экземпляр класса<see cref="Courier">.
+    /// </summary>
+    public Courier(string name, string surname, string phone_number)
+    {
+        Id = count++;
+        Name = name;
+        Surname = surname;        
+        PhoneNumber = phone_number;
+    }
 }
